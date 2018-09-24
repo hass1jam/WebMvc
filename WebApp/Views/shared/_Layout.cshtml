@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="css/material.css" rel="stylesheet" />
+    <script src="js/material.js"></script>
+    @RenderSection("Style",false)
+</head>
+<body style="background-color: #F7971C;">
+
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Product Development Management (PDM)</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" asp-action="index" asp-controller="home">Home</a>
+                    <a class="mdl-navigation__link" asp-action="index" asp-controller="contact">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">PDM</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+
+           @RenderBody()
+
+        </main>
+
+        <footer>Copyright @DateTime.Now.Year</footer>
+
+        @RenderSection("ScriptsBottom", false)
+</body>
+</html>

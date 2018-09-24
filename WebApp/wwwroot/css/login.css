@@ -1,0 +1,8 @@
+﻿.demo-layout-transparent {
+    background-color: #F7971C;
+}
+
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+        color: white;
+    }
